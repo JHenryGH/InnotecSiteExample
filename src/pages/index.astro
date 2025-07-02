@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import About from '../components/About.astro';
+import OurProcess from '../components/OurProcess.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Footer from '../components/Footer.astro';
+import ScrollReveal from '../components/ScrollReveal.tsx';
+import WaveDivider from '../components/WaveDivider.astro';
+---
+<Layout title="Innotec - Managed IT Services">
+    <Header />
+    <main>
+        <Hero />
+        <WaveDivider flipped={true}/>
+        <ScrollReveal client:visible><Services /></ScrollReveal>
+        <ScrollReveal client:visible><About /></ScrollReveal>
+        <WaveDivider />
+        <ScrollReveal client:visible><OurProcess /></ScrollReveal>
+        <WaveDivider transparent={true}/>
+        <ScrollReveal client:visible><Testimonials /></ScrollReveal>
+        <Footer />
+    </main>
+</Layout>

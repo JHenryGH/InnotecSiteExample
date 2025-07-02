@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+import techImage from '../assets/eagle.jpg';
+---
+<section id="about" class="py-20 bg-[var(--navy)]/60">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+            <Image src={techImage} 
+                 alt="A team of IT professionals collaborating in a modern office." 
+                 class="rounded-lg shadow-2xl w-full h-auto" />
+        </div>
+        <div class="md:w-1/2">
+            <h2 class="text-4xl">Your Strategic IT Partner in West Texas</h2>
+            <p class="mb-4 mt-4">
+                Founded in Andrews, Innotec is dedicated to providing enterprise-level IT services and solutions to businesses in the Permian Basin. We understand the unique challenges and opportunities of our local economy.
+            </p>
+            <p class="mb-6">
+                Our mission is to keep your operations running securely and efficiently, so you can focus on what you do best. We believe technology should be a competitive advantage, not a bottleneck.
+            </p>
+            <a href="/contact" class="font-mono text-[var(--cyan)] border border-[var(--cyan)] px-6 py-3 rounded-md hover:bg-cyan-400/10 transition-all">
+                Learn More About Us
+            </a>
+        </div>
+    </div>
+  </div>
+</section>

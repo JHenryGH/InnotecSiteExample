@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ApplicationForm from '../components/ApplicationForm.astro';
+import ScrollReveal from '../components/ScrollReveal.tsx';
+---
+<Layout title="Apply | Innotec">
+  <Header />
+  <main class="pt-24">
+    <section class="text-center py-12">
+        <ScrollReveal client:visible>
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">Apply Now</h1>
+            <p class="text-lg max-w-3xl mx-auto">
+                Ready to join the Innotec team? Please fill out the form below and attach your resume to be considered.
+            </p>
+        </ScrollReveal>
+    </section>
+    <ScrollReveal client:visible><ApplicationForm /></ScrollReveal>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import JobListing from '../components/JobListing.astro';
+import ScrollReveal from '../components/ScrollReveal.tsx';
+
+const jobOpenings = [
+  {
+    title: 'IT Support Specialist',
+    location: 'Andrews, TX',
+    type: 'Full-time',
+    description: 'Provide top-tier technical support to our clients, resolving hardware, software, and network issues with a focus on excellent customer service.',
+    qualifications: [
+      'CompTIA A+ or equivalent experience',
+      '2+ years in a help desk or support role',
+      'Strong knowledge of Windows, macOS, and Microsoft 365',
+      'Excellent problem-solving skills'
+    ]
+  },
+  {
+    title: 'Network Engineer',
+    location: 'Midland, TX',
+    type: 'Full-time',
+    description: 'Design, implement, and manage secure and scalable network infrastructure for our diverse client base, including firewalls, switches, and wireless solutions.',
+    qualifications: [
+      'Cisco CCNA or equivalent certification preferred',
+      'Experience with Fortinet, Cisco, or Meraki hardware',
+      'Deep understanding of TCP/IP, VLANs, and VPNs',
+      'Ability to manage projects from start to finish'
+    ]
+  }
+];
+---
+<Layout title="Careers | Innotec">
+  <Header />
+  <main class="pt-24">
+    <section class="text-center py-12">
+        <ScrollReveal client:visible>
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">Join Our Team</h1>
+            <p class="text-lg max-w-3xl mx-auto">
+                At Innotec, we're building the future of IT in West Texas. If you're passionate about technology and customer success, explore our open positions.
+            </p>
+        </ScrollReveal>
+    </section>
+    
+    <section class="py-12">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col gap-8 max-w-4xl mx-auto">
+          {jobOpenings.map((job, index) => (
+            <ScrollReveal client:visible><JobListing {...job} /></ScrollReveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
