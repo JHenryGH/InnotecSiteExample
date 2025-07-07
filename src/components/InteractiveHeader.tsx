@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import Logo from './Logo';
 
 export default function InteractiveHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,7 +44,7 @@ export default function InteractiveHeader() {
       <nav id="main-nav" className={navClasses}>
         <div className="nav-content-wrapper w-full flex items-center justify-between">
           <a href="/" className="flex items-center space-x-2 transition-transform hover:scale-105 z-10">
-            <Logo className="h-8 w-8 text-[var(--cyan)]" />
+            <img src='../src/assets/innotec.png' className="h-10 w-10 "/>
             <span className="text-xl font-bold text-[var(--white)]">Innotec</span>
           </a>
           
